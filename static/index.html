@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlexandrIA — your private, cited AI library</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Marked.js for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Sidebar: Wiki Navigation -->
+        <aside class="sidebar left-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-landmark"></i>
+                    <span>Alexandr<span style="color: var(--accent-primary)">IA</span></span>
+                </div>
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="wiki-search" placeholder="Search pages...">
+            </div>
+            <nav class="wiki-nav" id="wiki-nav">
+                <div class="loading">Loading folder structure...</div>
+            </nav>
+        </aside>
+
+        <div class="resizer" id="left-resizer"></div>
+
+        <!-- Middle Section: Wiki Viewer -->
+        <main class="viewer-section" id="viewer-section">
+            <header class="viewer-header">
+                <h1 id="page-title">Welcome</h1>
+                <div class="viewer-actions">
+                    <div class="page-search-container">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="page-search" placeholder="Search inside this page...">
+                        <span id="page-search-count"></span>
+                        <button id="page-search-prev" class="icon-btn" title="Previous"><i class="fas fa-chevron-up"></i></button>
+                        <button id="page-search-next" class="icon-btn" title="Next"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <button id="download-raw" title="Download Source PDF" style="display: none;"><i class="fas fa-download"></i></button>
+                    <button id="toggle-sidebar" title="Toggle Sidebar"><i class="fas fa-bars"></i></button>
+                </div>
+            </header>
+            <div class="markdown-body" id="wiki-content">
+                <div class="welcome-screen">
+                    <i class="fas fa-landmark"></i>
+                    <h2>Alexandr<span style="color: var(--accent-primary)">IA</span></h2>
+                    <p>Your private library of everything — every answer cited. Pick a page from the sidebar, or ask the assistant about your documents.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar: Chat Interface -->
+        <div class="resizer" id="right-resizer"></div>
+        <aside class="sidebar right-sidebar chat-sidebar" id="chat-sidebar">
+            <header class="chat-header">
+                <div class="chat-title">
+                    <i class="fas fa-robot"></i>
+                    <span>AlexandrIA</span>
+                </div>
+                <button id="clear-chat" title="Clear History"><i class="fas fa-trash-alt"></i></button>
+            </header>
+            <div class="chat-history" id="chat-history">
+                <div class="chat-message assistant">
+                    <div class="message-content">
+                        Hi! I'm AlexandrIA. I answer only from your own library of documents — and I cite the source for every claim. What would you like to look up?
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <textarea id="chat-input" placeholder="Ask anything about your documents..." rows="1"></textarea>
+                <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
