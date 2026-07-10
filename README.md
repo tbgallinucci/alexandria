@@ -5,7 +5,7 @@
 AlexandrIA is a small, self-hostable app that turns a folder of your own documents
 (PDFs, manuals, contracts, recipes, rulebooks…) into an AI assistant that answers
 **only** from those documents and **cites the source** for every claim. It runs
-100% locally against any OpenAI-compatible LLM — nothing leaves your machine.
+100% locally against any OpenAI-compatible LLM — nothing leaves your machine (currently configured for qwen2.5-14b-instruct-1m).
 
 AlexandrIA started as a problem I solved at work: giving a team reliable, cited answers over our own technical documentation. 
 This repository is a public, independent reimplementation of that idea — my own code, written from scratch on my own time, using openly-licensed sample documents (the Wikibooks Cookbook recipes, CC BY-SA). 
