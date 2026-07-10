@@ -7,6 +7,10 @@ AlexandrIA is a small, self-hostable app that turns a folder of your own documen
 **only** from those documents and **cites the source** for every claim. It runs
 100% locally against any OpenAI-compatible LLM — nothing leaves your machine.
 
+AlexandrIA started as a problem I solved at work: giving a team reliable, cited answers over our own technical documentation. 
+This repository is a public, independent reimplementation of that idea — my own code, written from scratch on my own time, using openly-licensed sample documents (the Wikibooks Cookbook recipes, CC BY-SA). 
+No proprietary code or data is included. That's why the history starts from a single initial commit: it's the first release of this public version, not the internal development history.
+
 - 🔒 **Private** — your files and the model stay on your computer.
 - 📌 **Grounded & cited** — every factual claim links back to the source; if the
   answer isn't in your documents, it says so instead of inventing one.
